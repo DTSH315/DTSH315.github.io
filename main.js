@@ -197,7 +197,7 @@ function createCard(pos, imgUrl) {
 }
 
 function createLayeredCardPositions() {
-  const R = 6;
+  const R = 4.8;
   const layers = [
     { list: topLayer, phi: Math.PI / 3 },
     { list: midLayer, phi: Math.PI / 2 },
