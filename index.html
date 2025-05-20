@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>來自315的禮物</title>
+
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  touch-action: none;
+  background: #000;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+</style>
+
+
+  <!-- importmap：將模組名對應到 CDN 真實路徑 -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.module.js",
+      "OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.157.0/examples/jsm/controls/OrbitControls.js"
+    }
+  }
+  </script>
+
+  <!-- gsap for animation -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+</head>
+<body>
+  <script type="module" src="./main.js?v=2"></script>
+<script>
+  if (!window.WebGLRenderingContext) {
+    alert('你的裝置可能不支援 WebGL，請改用其他瀏覽器或設備觀看。');
+  }
+</script>
+  <div id="login-screen" style="position:absolute; top:0; left:0; width:100%; height:100%; background:#fff; display:flex; justify-content:center; align-items:center; flex-direction:column; z-index:10;">
+    <h2>登入</h2>
+    <input type="text" id="account" placeholder="請輸入班級" />
+    <input type="password" id="password" placeholder="使用下方的輸入框" />
+    <button id="login-btn">登入</button>
+    <p id="login-msg" style="color:red;"></p>
+
+    <!-- 中文輔助欄位，放進 login-screen 裡面 -->
+    <div id="name-helper-box" style="margin-top: 10px;">
+      <label for="name-helper">請輸入您的姓名：</label>
+      <input type="text" id="name-helper" placeholder="例如：蔡曜宇" />
+      <button id="copy-name-btn">複製到上面</button>
+    </div>
+  </div>
+</body>
+</html>
