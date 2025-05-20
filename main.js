@@ -199,9 +199,9 @@ function createCard(pos, imgUrl) {
 function createLayeredCardPositions() {
   const R = 4.8;
   const layers = [
-    { list: topLayer, phi: Math.PI / 3 },
+    { list: topLayer, phi: Math.PI *2/ 7 },
     { list: midLayer, phi: Math.PI / 2 },
-    { list: bottomLayer, phi: 2 * Math.PI / 3 }
+    { list: bottomLayer, phi: Math.PI *5/ 7 }
   ];
   const spherical = new THREE.Spherical();
   const point = new THREE.Vector3();
